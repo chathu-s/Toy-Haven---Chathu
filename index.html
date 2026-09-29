@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toy Haven</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ff6b6b'/%3E%3Ctext x='50%25' y='55%25' font-size='28' text-anchor='middle' fill='white' font-family='Arial'%3ETH%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">Toy Haven</div>
+      <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="primary-navigation" class="nav-links">
+        <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+        <li><a href="#products" class="nav-link" data-page="products">Products</a></li>
+        <li><a href="#cart" class="nav-link" data-page="cart">Cart</a></li>
+        <li><a href="#wishlist" class="nav-link" data-page="wishlist">Wishlist</a></li>
+        <li><a href="#feedback" class="nav-link" data-page="feedback">Feedback</a></li>
+      </ul>
+      <div class="nav-tools">
+        <label class="currency-picker">
+          <span>Currency</span>
+          <select id="currency-select" aria-label="Select currency">
+            <option value="LKR">LKR</option>
+            <option value="USD">USD</option>
+          </select>
+        </label>
+        <a href="#cart" class="cart-pill nav-link-internal" aria-label="View cart">
+          <span>Cart</span>
+          <span id="cart-count" class="cart-count">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+        <!-- Home page: hero, categories, best sellers, and brand story. -->
+    <section id="home" class="page active">
+      <section class="hero">
+        <div class="hero-slides">
+          <div class="hero-slide active">
+            <img class="hero-image" src="Images/avengers1.jpg" alt="Avengers toy characters">
+            <div class="hero-content">
+              <h1>Superhero Fun</h1>
+              <p>Bring your favorite heroes home.</p>
+              <div class="hero-actions">
+                <a href="#products" class="btn btn-primary nav-link-internal">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide">
+            <img class="hero-image" src="Images/hotwheels.avif" alt="Hot Wheels toy cars">
+            <div class="hero-content">
+              <h1>Hot Wheels Speed</h1>
+              <p>Race into a world of colourful cars.</p>
+              <div class="hero-actions">
+                <a href="#products" class="btn btn-primary nav-link-internal">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide">
+            <img class="hero-image" src="Images/Disney_Princesses.webp" alt="Princess characters">
+            <div class="hero-content">
+              <h1>Princess Adventures</h1>
+              <p>Discover magical toys for every little dreamer.</p>
+              <div class="hero-actions">
+                <a href="#products" class="btn btn-primary nav-link-internal">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide">
+            <img class="hero-image" src="Images/toystory.webp" alt="Toy Story characters">
+            <div class="hero-content">
+              <h1>Storytime Starts Here</h1>
+              <p>Play, imagine, and create your own adventure.</p>
+              <div class="hero-actions">
+                <a href="#products" class="btn btn-primary nav-link-internal">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-dots"></div>
+      </section>
+
+      <section class="section demo-overview">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Project flow</span>
+            <h2 class="section-title">How the app works</h2>
+          </div>
+          <div class="overview-grid">
+            <article class="overview-card reveal">
+              <span class="step-number">01</span>
+              <h3>Browse</h3>
+              <p>Explore products by category, search by name, and filter items quickly.</p>
+            </article>
+            <article class="overview-card reveal">
+              <span class="step-number">02</span>
+              <h3>Add to cart</h3>
+              <p>Users can add products, update quantities, and review the live order total.</p>
+            </article>
+            <article class="overview-card reveal">
+              <span class="step-number">03</span>
+              <h3>Checkout</h3>
+              <p>Complete the form, simulate payment, and save the order in browser storage.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Trending now</span>
+            <h2 class="section-title">Featured Highlights</h2>
+          </div>
+          <div class="toy-radar">
+            <article class="radar-feature reveal">
+              <div class="radar-copy">
+                <span class="radar-kicker">Collector's pick · 01</span>
+                <h3>Build your own shelf story.</h3>
+                <p>Find the character, car, or clever game that makes your space feel unmistakably yours.</p>
+                <a href="#products" class="radar-link nav-link-internal" data-filter="Figurines">Explore figurines <span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="radar-art">
+                <span class="art-spark spark-one">✦</span>
+                <span class="art-spark spark-two">✦</span>
+                <img src="Images/figurines/figurines3.jpg" alt="Deadpool collector figurine">
+                <span class="art-sticker">Shelf<br>icon</span>
+              </div>
+            </article>
+
+            <div class="radar-list">
+              <a href="#products" class="radar-item reveal" data-filter="Diecast Cars">
+                <span class="radar-number">02</span>
+                <span class="radar-item-icon">🚗</span>
+                <span class="radar-item-copy"><strong>Diecast Cars</strong><small>Small scale, big speed</small></span>
+                <span class="radar-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="#products" class="radar-item reveal" data-filter="Board Games">
+                <span class="radar-number">03</span>
+                <span class="radar-item-icon">🎲</span>
+                <span class="radar-item-copy"><strong>Board Games</strong><small>Bring everyone to the table</small></span>
+                <span class="radar-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="#products" class="radar-item reveal" data-filter="Toys">
+                <span class="radar-number">04</span>
+                <span class="radar-item-icon">🧸</span>
+                <span class="radar-item-copy"><strong>Everyday Toys</strong><small>Playful picks for every age</small></span>
+                <span class="radar-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-showcase">
+        <div class="container showcase-grid">
+          <div class="showcase-card reveal main-showcase">
+            <span class="eyebrow">Best seller</span>
+            <h2>Dream shelves. Cozy rooms. Big fun.</h2>
+            <p>Turn your space into your happy place with collectible favorites, creative toys, and game-night essentials.</p>
+            <div class="showcase-actions">
+              <a href="#products" class="btn btn-primary nav-link-internal">Explore Bestsellers</a>
+              <a href="#wishlist" class="btn btn-outline nav-link-internal">Save Favorites</a>
+            </div>
+          </div>
+
+          <div class="showcase-stack reveal">
+            <div class="mini-card accent-card">
+              <span>New drop</span>
+              <h3>Glow-Up Finds</h3>
+              <p>Fresh, colorful picks with a playful twist.</p>
+            </div>
+            <div class="mini-card stat-card">
+              <div class="stat-number">1200+</div>
+              <div class="stat-text">happy shoppers this month</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section brand-story">
+        <div class="container story-grid">
+          <div class="story-copy reveal">
+            <span class="eyebrow">Why students love us</span>
+            <h2>Simple, joyful picks for your room, your downtime, and your collection.</h2>
+            <p>From budget-friendly toys to shelf-worthy figurines, Toy Haven keeps things easy, modern, and fun for first-year students who want a brighter, more personal space.</p>
+            <div class="trust-points">
+              <div>
+                <strong>4.9/5</strong>
+                <span>Student reviews</span>
+              </div>
+              <div>
+                <strong>Fast</strong>
+                <span>Delivery on top picks</span>
+              </div>
+              <div>
+                <strong>Easy</strong>
+                <span>Returns & support</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-panel reveal">
+            <div class="mini-card accent-card">
+              <span>Trending now</span>
+              <h3>Campus favorites</h3>
+              <p>Affordable finds that make a room feel more like home.</p>
+            </div>
+            <div class="mini-card">
+              <span>Gift-ready</span>
+              <h3>Smart little treats</h3>
+              <p>Perfect for birthdays, move-in week, and cozy study nights.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+        <!-- Products page: search, filters, wishlist, and cart actions. -->
+    <section id="products" class="page">
+      <div class="container">
+        <h1 class="page-title">Shop Products</h1>
+
+        <div class="products-controls">
+          <label class="sr-only" for="search-input">Search products by name</label>
+          <input type="search" id="search-input" placeholder="Search by product name..." autocomplete="off" />
+          <div class="filter-buttons">
+            <button type="button" class="filter-btn active" data-category="All">All</button>
+            <button type="button" class="filter-btn" data-category="Figurines">Figurines</button>
+            <button type="button" class="filter-btn" data-category="Toys">Toys</button>
+            <button type="button" class="filter-btn" data-category="Board Games">Board Games</button>
+            <button type="button" class="filter-btn" data-category="Diecast Cars">Diecast Cars</button>
+          </div>
+        </div>
+
+        <div id="products-grid" class="products-grid"></div>
+      </div>
+    </section>
+
+        <!-- Cart page: selected items and order totals. -->
+    <section id="cart" class="page">
+      <div class="container">
+        <h1 class="page-title">Your Shopping Cart</h1>
+
+        <div id="cart-container" class="cart-container"></div>
+
+        <div id="cart-summary" class="cart-summary hidden">
+          <h2>Order Summary</h2>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="summary-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span id="summary-shipping">$0.00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="summary-total">$0.00</span>
+          </div>
+          <div class="summary-actions">
+            <button type="button" id="clear-cart" class="btn btn-danger">Clear Cart</button>
+            <button type="button" id="proceed-checkout" class="btn btn-primary">Proceed to Checkout</button>
+          </div>
+        </div>
+
+        <div id="empty-cart-msg" class="empty-state hidden">
+          <p>Your cart is empty.</p>
+          <a href="#products" class="btn btn-primary nav-link-internal">Browse Products</a>
+        </div>
+      </div>
+    </section>
+
+        <!-- Checkout page: delivery details, payment simulation, and totals. -->
+    <section id="checkout" class="page">
+      <div class="container">
+        <h1 class="page-title">Checkout</h1>
+
+        <div id="checkout-empty" class="empty-state hidden">
+          <p>Your cart is empty. Add items before checkout.</p>
+          <a href="#products" class="btn btn-primary nav-link-internal">Browse Products</a>
+        </div>
+
+        <div id="checkout-content" class="checkout-content hidden">
+          <div class="checkout-grid">
+            <form id="checkout-form" class="checkout-form reveal">
+              <h2>Delivery Details</h2>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="full-name">Full Name</label>
+                  <input type="text" id="full-name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="address">Delivery Address</label>
+                <textarea id="address" rows="3" required></textarea>
+              </div>
+
+              <h2>Payment Method</h2>
+              <div class="form-group">
+                <label class="radio-label">
+                  <input type="radio" name="payment" value="card" checked />
+                  Card (Simulation)
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="payment" value="cod" />
+                  Cash on Delivery
+                </label>
+              </div>
+
+              <h2>Order Summary</h2>
+              <div id="order-summary-items" class="order-summary-items"></div>
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="sum-subtotal">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Shipping</span>
+                <span id="sum-shipping">$0.00</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total</span>
+                <span id="sum-total">$0.00</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Confirm Order</button>
+              <p id="checkout-msg" class="form-msg"></p>
+            </form>
+
+            <div class="checkout-info reveal">
+              <h3>Secure Checkout</h3>
+              <p>Your information is used only to process this order. This is a demo site—no real payments are taken.</p>
+              <ul>
+                <li>Free shipping on orders over $100</li>
+                <li>Easy returns within 14 days</li>
+                <li>Secure simulated payment flow</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shown after a valid order is submitted. -->
+        <div id="success-overlay" class="success-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="success-title">
+          <div class="success-card">
+            <div class="success-icon">✅</div>
+            <h2 id="success-title">Order Placed Successfully!</h2>
+            <p id="success-order-id" aria-live="polite"></p>
+            <p>Thank you for shopping with Toy Haven.</p>
+            <a href="#products" class="btn btn-primary nav-link-internal">Continue Shopping</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Wishlist page: saved products and collection status. -->
+    <section id="wishlist" class="page">
+      <div class="container">
+        <h1 class="page-title">Your Wishlist & Collection</h1>
+        <p class="page-subtitle">Track items you’re interested in, already own, or no longer want.</p>
+
+        <div id="wishlist-empty" class="empty-state hidden">
+          <p>Your wishlist is empty.</p>
+          <a href="#products" class="btn btn-primary nav-link-internal">Browse Products</a>
+        </div>
+
+        <div id="wishlist-grid" class="wishlist-grid"></div>
+      </div>
+    </section>
+
+        <!-- Feedback page: contact form, order history, and FAQs. -->
+    <section id="feedback" class="page">
+      <div class="container">
+        <h1 class="page-title">Feedback & Support</h1>
+
+        <div class="feedback-grid">
+          <form id="feedback-form" class="feedback-form reveal">
+            <h2>Send us a message</h2>
+            <div class="form-group">
+              <label for="fb-name">Name</label>
+              <input type="text" id="fb-name" required />
+            </div>
+            <div class="form-group">
+              <label for="fb-email">Email</label>
+              <input type="email" id="fb-email" required />
+            </div>
+            <div class="form-group">
+              <label for="fb-message">Message</label>
+              <textarea id="fb-message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            <p id="feedback-msg" class="form-msg"></p>
+          </form>
+
+          <div class="faq-section reveal">
+            <h2>FAQ</h2>
+            <div class="accordion">
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false" aria-controls="faq-answer-1">
+                  How do I track my order?
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div id="faq-answer-1" class="accordion-content">
+                  <p>Once your order is placed, you’ll receive an order ID. In a real deployment, you’d use this to track shipping. For this demo, orders are saved in your browser under “Order History” in localStorage.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+                  What payment methods do you accept?
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div id="faq-answer-2" class="accordion-content">
+                  <p>This demo supports Card (simulated) and Cash on Delivery. No real payments are processed.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+                  What is your return policy?
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div id="faq-answer-3" class="accordion-content">
+                  <p>We offer easy returns within 14 days of delivery for most items in original condition.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+                  Do you ship internationally?
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div id="faq-answer-4" class="accordion-content">
+                  <p>This is a demo site. In production, international shipping options would be shown at checkout.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="feedback-feed-section reveal" aria-live="polite">
+          <div class="feedback-feed-heading">
+            <div>
+              <p class="eyebrow">Community voice</p>
+              <h2>Recent Feedback</h2>
+            </div>
+            <span class="feedback-live-indicator"><span></span>Live updates</span>
+          </div>
+          <div id="feedback-list" class="feedback-list"></div>
+        </section>
+
+        <div id="order-history-section" class="order-history-section reveal">
+          <h2>Your Order History</h2>
+          <div id="order-history-list" class="order-history-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Toy Haven</h4>
+        <p>Your modern collectibles and toys destination.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home" class="nav-link-internal">Home</a></li>
+          <li><a href="#products" class="nav-link-internal">Products</a></li>
+          <li><a href="#cart" class="nav-link-internal">Cart</a></li>
+          <li><a href="#wishlist" class="nav-link-internal">Wishlist</a></li>
+          <li><a href="#feedback" class="nav-link-internal">Feedback</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p>Get updates on new drops and deals.</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <label class="sr-only" for="newsletter-email">Email address for newsletter</label>
+          <input type="email" id="newsletter-email" placeholder="Your email" autocomplete="email" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p id="newsletter-msg" class="form-msg"></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Toy Haven. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
