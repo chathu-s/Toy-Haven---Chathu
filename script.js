@@ -18,11 +18,11 @@ const productsData = [
   { id: 28, name: 'Who Is It? Guessing Game', category: 'Board Games', price: 25.99, image: 'Images/boardgames/boardgames2.jpg' },
   { id: 29, name: 'Magnetic Battle Chess', category: 'Board Games', price: 21.50, image: 'Images/boardgames/boardgames3.jpg' },
   { id: 30, name: 'Boom Boom Balloon Game', category: 'Board Games', price: 18.99, image: 'Images/boardgames/boardgames4.jpg' },
-  { id: 31, name: 'Street Racer Diecast Car', category: 'Diecast Cars', price: 34.99, image: 'Images/diecast car/diecast car.webp' },
+  { id: 31, name: 'Street Racer Diecast Car', category: 'Diecast Cars', price: 34.99, image: 'Images/diecast car/diecast car.jpg' },
   { id: 32, name: 'Classic Red Diecast Car', category: 'Diecast Cars', price: 29.99, image: 'Images/diecast car/diecast car1.jpg' },
   { id: 33, name: 'Blue Speedster Diecast Car', category: 'Diecast Cars', price: 32.50, image: 'Images/diecast car/diecast car2.jpg' },
-  { id: 34, name: 'Yellow Rally Diecast Car', category: 'Diecast Cars', price: 36.99, image: 'Images/diecast car/diecast car3.webp' },
-  { id: 35, name: 'Silver Classic Diecast Car', category: 'Diecast Cars', price: 39.99, image: 'Images/diecast car/diecast car4.webp' },
+  { id: 34, name: 'Yellow Rally Diecast Car', category: 'Diecast Cars', price: 36.99, image: 'Images/diecast car/diecast car3.jpg' },
+  { id: 35, name: 'Silver Classic Diecast Car', category: 'Diecast Cars', price: 39.99, image: 'Images/diecast car/diecast car4.jpg' },
   { id: 36, name: 'Black Muscle Diecast Car', category: 'Diecast Cars', price: 42.50, image: 'Images/diecast car/diecast car5.jpg' }
 ];
 
